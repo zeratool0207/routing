@@ -17,6 +17,7 @@ function App() {
         // console.log(response.data);
         setList(response.data);
         console.log(response.data);
+        console.log(response.data[0].menuList[0]);
         } catch (e) {
           console.log(e);
         }
@@ -31,17 +32,17 @@ function App() {
     return (
         <div>
             백엔드에서 가져온 데이터입니다 : 
-            {list.map((item) => (
+             {/*{list.map((item) => (
 
                 <>
-                    {/* <h3>{item.men_disp_no}</h3> */}
+                    <h3>{item.men_disp_no}</h3> }
                     <h3 onClick={() => alert(item.men_url)}>{item.men_name}</h3>
-                    {/* <h3>{item.men_up_no}</h3>
+                    { <h3>{item.men_up_no}</h3>
                     <h3>{item.men_id}</h3>
-                    <h3>{item.men_name}</h3> */}
+                    <h3>{item.men_name}</h3> 
                 </>
 
-            ))}
+            ))}*/}
             <button onClick={btnTest}>테스트</button>
             
         </div>
